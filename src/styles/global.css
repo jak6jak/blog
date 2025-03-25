@@ -80,7 +80,7 @@ pre {
 
 :root {
   --astro-code-color-text: #09090b;
-  --astro-code-color-background: #fafafa;
+  --astro-code-color-background: #fbfefe;
   --astro-code-token-comment: #a19595;
   --astro-code-token-keyword: #f47067;
   --astro-code-token-string: #00a99a;

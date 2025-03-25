@@ -1,4 +1,4 @@
-export type CollectionName = "blog" | "projects" | "talks";
+export type CollectionName = "blog" | "projects";
 
 
 export type GlobalSite = {
@@ -13,13 +13,13 @@ export type GlobalSite = {
 };
 
 export const GLOBAL: GlobalSite = {
-  title: "Astro Milidev",
-  description: "a minimalistic blog+portfolio Astro theme",
-  author: "John Doe",
-  authorPhotoSrc: "/johndoe.png",
+  title: "Jacob Edie - Blog",
+  description: "A blog about an aspireing software engineer and his journey through the world of software development.",
+  author: "Jacob Edie",
+  authorPhotoSrc: "/egg.png",
   logo: {
-    darkThemeSrc: "/logo/logo_dark.png",
-    lightThemeSrc: "/logo/logo_light.png",
+    darkThemeSrc: "/logo-dark.svg",
+    lightThemeSrc: "/logo-light.svg",
   }
 };
 
@@ -37,7 +37,7 @@ type HomeSite =  {
 export const HOME: HomeSite = {
   blogEntries: 5,
   projectEntries: 3,
-  talkEntries: 3,
+  talkEntries: 0,
 };
 
 type BlogSite = CollectionSite & {
@@ -78,20 +78,20 @@ type ContactSite = ContactInfo[]
 export const CONTACT: ContactSite = [
   {
     type: "Email",
-    href: "mailto:email@example.com",
-    displayAs: "email@example.com",
+    href: "mailto:jacobedie1@gmail.com",
+    displayAs: "jacobedie1@gmail.com",
   },
   {
-    type: "X",
-    href: "https://x.com/BillGates",
-    displayAs: "@BillGates on X",
+    type: "BlueSky",
+    href: "https://bsky.app/profile/jak6jak.bsky.social",
+    displayAs: "@jak6jak.bsky.social",
   },
   {
     type: "GitHub",
-    href: "https://github.com/dotnet",
+    href: "https://github.com/jak6jak",
   },
   {
     type: "LinkedIn",
-    href: "https://www.linkedin.com/in/williamhgates/",
+    href: "https://www.linkedin.com/in/jacob-edie/",
   },
 ];
