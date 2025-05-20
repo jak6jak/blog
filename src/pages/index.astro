@@ -6,6 +6,19 @@ import "../styles/global.css";
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+<script>
+	import { actions } from "astro:actions";
+	const button = document.querySelector('button');
+button?.addEventListener('click', async () => {
+  // Show alert pop-up with greeting from action
+  const { data, error } = await actions.getGreeting({ name: "Houston" });
+  if (!error) alert(data);
+});
+
+</script>
+
+
+<button> Get Greeting</button>
 <Layout>
 	<Welcome />
 </Layout>
