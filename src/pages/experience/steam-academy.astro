@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import "../../styles/global.css";
+---
+
+<Layout>
+	<div class="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
+		<div class="container mx-auto px-6 py-12">
+			<div class="max-w-4xl mx-auto">
+				<!-- Back Navigation -->
+				<div class="mb-8">
+					<a href="/about" class="inline-flex items-center text-green-600 hover:text-green-800 font-medium">
+						← Back to About
+					</a>
+				</div>
+
+				<!-- Header -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<div class="mb-6">
+						<h1 class="text-4xl font-bold text-green-600 mb-2">STEM Coach</h1>
+						<p class="text-xl text-gray-600 mb-4">Delaware STEAM Academy • Remote • June 2021 - July 2024</p>
+					</div>
+				</div>
+				
+				<!-- Key Accomplishments -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<h2 class="text-2xl font-bold text-gray-900 mb-6">Key Accomplishments</h2>
+					<ul class="space-y-4 text-gray-700">
+						<li class="flex items-start">
+							<span class="text-green-500 mr-3 mt-1">•</span>
+							<span>Designed and taught comprehensive ACSL (American Computer Science League) programming courses, covering algorithms, data structures, and competitive programming concepts</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-green-500 mr-3 mt-1">•</span>
+							<span>Taught engaging Roblox development courses using Lua scripting, teaching students game development fundamentals and programming logic</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-green-500 mr-3 mt-1">•</span>
+							<span>Developed Unity3D course curriculum covering game engine basics, C# scripting, and 3D game development principles</span>
+						</li>
+					</ul>
+				</div>
+				
+				<!-- Student Success -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<h2 class="text-2xl font-bold text-gray-900 mb-6">Student Success</h2>
+					<div class="bg-green-50 p-6 rounded-xl">
+						<h3 class="text-lg font-semibold text-green-900 mb-3">Consistently Excellent Reviews</h3>
+						<p class="text-green-800">
+							Received multiple 5-star reviews from both parents and students, demonstrating effective teaching methods and strong communication skills.
+						</p>
+					</div>
+				</div>
+				
+				<!-- Subjects Taught -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+					<h2 class="text-2xl font-bold text-gray-900 mb-6">Subjects Taught</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div class="bg-green-50 p-4 rounded-xl">
+							<h3 class="font-semibold text-green-800 mb-2">ACSL Programming</h3>
+							<p class="text-sm text-gray-600">Competitive programming concepts and problem-solving</p>
+						</div>
+						<div class="bg-green-50 p-4 rounded-xl">
+							<h3 class="font-semibold text-green-800 mb-2">Roblox Development</h3>
+							<p class="text-sm text-gray-600">Lua scripting and game development</p>
+						</div>
+						<div class="bg-green-50 p-4 rounded-xl">
+							<h3 class="font-semibold text-green-800 mb-2">Unity3D</h3>
+							<p class="text-sm text-gray-600">Game engine and C# programming</p>
+						</div>
+						<div class="bg-green-50 p-4 rounded-xl">
+							<h3 class="font-semibold text-green-800 mb-2">Problem Solving</h3>
+							<p class="text-sm text-gray-600">Algorithmic thinking and logic</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>

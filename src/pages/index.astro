@@ -1,24 +1,175 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<script>
-	import { actions } from "astro:actions";
-	const button = document.querySelector('button');
-button?.addEventListener('click', async () => {
-  // Show alert pop-up with greeting from action
-  const { data, error } = await actions.getGreeting({ name: "Houston" });
-  if (!error) alert(data);
-});
-
-</script>
-
-
-<button> Get Greeting</button>
 <Layout>
-	<Welcome />
+	<div class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+		<!-- Hero Section -->
+		<section class="py-20 px-6">
+			<div class="container mx-auto max-w-6xl">
+				<div class="text-center mb-16">
+					<img src="https://avatars.githubusercontent.com/u/6291339?v=4" 
+						 alt="Jacob Edie" 
+						 class="w-40 h-40 mx-auto mb-8 rounded-full shadow-xl object-cover border-4 border-white">
+					<h1 class="text-6xl font-bold text-gray-900 mb-6">Jacob Edie</h1>
+					<p class="text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+						Computer Science Student & Software Developer passionate about learning.
+					</p>
+					<div class="flex flex-wrap justify-center gap-4">
+						<a href="/about" 
+						   class="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors inline-flex items-center gap-2 shadow-lg">
+							👨‍💻 View Experience
+						</a>
+						<a href="mailto:jacobedie1@gmail.com" 
+						   class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-colors inline-flex items-center gap-2">
+							📧 Get In Touch
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Quick Stats -->
+		<section class="py-16 px-6 bg-white/60 backdrop-blur-sm">
+			<div class="container mx-auto max-w-6xl">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+					<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+						<div class="text-3xl font-bold text-blue-600 mb-2">2+</div>
+						<div class="text-gray-600">Years Experience</div>
+					</div>
+					<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+						<div class="text-3xl font-bold text-purple-600 mb-2">1600+</div>
+						<div class="text-gray-600">Game Downloads</div>
+					</div>
+					<div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+						<div class="text-3xl font-bold text-orange-600 mb-2">5⭐</div>
+						<div class="text-gray-600">Teaching Reviews</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Featured Work -->
+		<section class="py-20 px-6">
+			<div class="container mx-auto max-w-6xl">
+				<h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Featured Projects</h2>
+				<div class="grid md:grid-cols-2 gap-8 mb-12">
+					<div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow">
+						<div class="bg-gradient-to-br from-blue-500 to-cyan-500 p-8 text-white">
+							<h3 class="text-2xl font-bold mb-3">Movie Poll Website</h3>
+							<p class="text-blue-100 mb-4">Interactive polling platform with movie data integration</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="bg-white/20 px-3 py-1 rounded-full text-sm">SvelteKit</span>
+								<span class="bg-white/20 px-3 py-1 rounded-full text-sm">MongoDB</span>
+								<span class="bg-white/20 px-3 py-1 rounded-full text-sm">API Integration</span>
+							</div>
+						</div>
+						<div class="p-6">
+							<p class="text-gray-700 mb-4">A polling website specializing in movies, populated with data from Open Movie Database. Built with modern web technologies for seamless user experience.</p>
+							<div class="flex gap-3">
+								<a href="/projects/movie-poll" 
+								   class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-2">
+									Learn More →
+								</a>
+								<a href="https://voting.fly.dev/" target="_blank" 
+								   class="text-green-600 hover:text-green-800 font-medium inline-flex items-center gap-2">
+									Launch Project →
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow">
+						<div class="bg-gradient-to-br from-purple-500 to-pink-500 p-8 text-white">
+							<h3 class="text-2xl font-bold mb-3">Grappling Around</h3>
+							<p class="text-purple-100 mb-4">Unity game featuring innovative grappling mechanics</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="bg-white/20 px-3 py-1 rounded-full text-sm">Unity</span>
+								<span class="bg-white/20 px-3 py-1 rounded-full text-sm">C#</span>
+								<span class="bg-white/20 px-3 py-1 rounded-full text-sm">Game Design</span>
+							</div>
+						</div>
+						<div class="p-6">
+							<p class="text-gray-700 mb-4">A Unity game featuring grappling gun mechanics for dynamic swinging gameplay. The prototype has attracted over 1,600+ downloads on itch.io.</p>
+							<div class="flex gap-3">
+								<a href="/projects/grappling-around" 
+								   class="text-purple-600 hover:text-purple-800 font-medium inline-flex items-center gap-2">
+									Learn More →
+								</a>
+								<a href="https://jacobedie.itch.io/grapling-around" target="_blank" 
+								   class="text-green-600 hover:text-green-800 font-medium inline-flex items-center gap-2">
+									Play Game →
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills Preview -->
+		<section class="py-16 px-6 bg-white/60 backdrop-blur-sm">
+			<div class="container mx-auto max-w-6xl">
+				<h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Core Technologies</h2>
+				<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+					<div class="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+						<div class="text-3xl mb-2">💜</div>
+						<span class="text-sm font-medium text-purple-900">C#</span>
+					</div>
+					<div class="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+						<div class="text-3xl mb-2">⚡</div>
+						<span class="text-sm font-medium text-blue-900">C++</span>
+					</div>
+					<div class="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+						<div class="text-3xl mb-2">☕</div>
+						<span class="text-sm font-medium text-orange-900">Java</span>
+					</div>
+					<div class="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+						<div class="text-3xl mb-2">🎮</div>
+						<span class="text-sm font-medium text-green-900">Unity</span>
+					</div>
+					<div class="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+						<div class="text-3xl mb-2">🔥</div>
+						<span class="text-sm font-medium text-red-900">Git</span>
+					</div>
+					<div class="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+						<div class="text-3xl mb-2">💻</div>
+						<span class="text-sm font-medium text-indigo-900">Visual Studio</span>
+					</div>
+					<div class="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+						<div class="text-3xl mb-2">🗃️</div>
+						<span class="text-sm font-medium text-teal-900">SQL</span>
+					</div>
+					<div class="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+						<div class="text-3xl mb-2">🌙</div>
+						<span class="text-sm font-medium text-yellow-900">Lua</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Call to Action -->
+		<section class="py-20 px-6">
+			<div class="container mx-auto max-w-4xl">
+				<div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl shadow-2xl p-12 text-white text-center">
+					<h2 class="text-4xl font-bold mb-6">Ready to Collaborate?</h2>
+					<p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+						I'm always interested in new opportunities, challenging projects, and meaningful collaborations. 
+						Let's build something amazing together!
+					</p>
+					<div class="flex flex-wrap justify-center gap-4">
+						<a href="/about" 
+						   class="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-colors inline-flex items-center gap-2 shadow-lg">
+							📋 View Full Resume
+						</a>
+						<a href="https://github.com/jak6jak" target="_blank"
+						   class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+							🐙 GitHub Profile
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 </Layout>

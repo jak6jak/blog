@@ -1,0 +1,207 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import "../../styles/global.css";
+---
+
+<Layout>
+	<div class="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
+		<div class="container mx-auto px-6 py-12">
+			<div class="max-w-4xl mx-auto">
+				<!-- Back Navigation -->
+				<div class="mb-8">
+					<a href="/" class="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium">
+						← Back to Home
+					</a>
+				</div>
+
+				<!-- Project Header -->
+				<div class="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl shadow-xl p-12 text-white mb-8">
+					<div class="max-w-3xl">
+						<h1 class="text-5xl font-bold mb-6">Grappling Around</h1>
+						<p class="text-2xl text-purple-100 mb-8">
+							A Unity game featuring innovative grappling gun mechanics for dynamic swinging gameplay
+						</p>
+						<div class="flex flex-wrap gap-3 mb-8">
+							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">Unity 3D</span>
+							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">C#</span>
+							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">Physics Programming</span>
+							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">Game Design</span>
+							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">3D Platformer</span>
+						</div>
+						<div class="flex flex-wrap gap-4">
+							<a href="https://jacobedie.itch.io/grapling-around" target="_blank" 
+							   class="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-purple-50 transition-colors inline-flex items-center gap-2 shadow-lg">
+								🎮 Play Game
+							</a>
+							<div class="bg-white/20 px-6 py-4 rounded-xl font-semibold">
+								📊 1600+ Downloads
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Project Overview -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Game Overview</h2>
+					<p class="text-lg text-gray-700 leading-relaxed mb-6">
+						Grappling Around is a 3D platformer game that puts players in control of a character equipped with a versatile grappling gun. 
+						The game focuses on fluid movement mechanics, challenging platforming sections, and physics-based gameplay that rewards skill and creativity.
+					</p>
+					<p class="text-lg text-gray-700 leading-relaxed mb-6">
+						Players must navigate through various levels using their grappling gun to swing across gaps, climb walls, and overcome obstacles. 
+						The game emphasizes momentum-based movement, requiring players to master the timing and physics of grappling to achieve optimal speed and efficiency.
+					</p>
+					<div class="bg-purple-50 p-6 rounded-xl border border-purple-100">
+						<h3 class="text-xl font-semibold text-purple-900 mb-3">🏆 Community Reception</h3>
+						<p class="text-purple-800">
+							The prototype has been well-received by the gaming community, achieving over <strong>1,600 downloads</strong> on itch.io 
+							and receiving positive feedback for its innovative grappling mechanics and smooth gameplay experience.
+						</p>
+					</div>
+				</div>
+
+				<!-- Core Mechanics -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Core Mechanics</h2>
+					<div class="grid md:grid-cols-2 gap-6">
+						<div class="space-y-6">
+							<div class="flex items-start">
+								<div class="bg-purple-100 rounded-full p-3 mr-4 mt-1">
+									<svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+										<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-semibold text-gray-900 mb-2">Grappling Gun System</h3>
+									<p class="text-gray-700">Physics-based grappling hook with realistic rope dynamics and swing mechanics</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="bg-purple-100 rounded-full p-3 mr-4 mt-1">
+									<svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+										<path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-semibold text-gray-900 mb-2">Momentum-Based Movement</h3>
+									<p class="text-gray-700">Fluid character movement that maintains physics-accurate momentum and inertia</p>
+								</div>
+							</div>
+						</div>
+						<div class="space-y-6">
+							<div class="flex items-start">
+								<div class="bg-purple-100 rounded-full p-3 mr-4 mt-1">
+									<svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+										<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-semibold text-gray-900 mb-2">Precision Platforming</h3>
+									<p class="text-gray-700">Challenging level design that requires skillful use of grappling mechanics</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+				<!-- Technical Implementation -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Technical Implementation</h2>
+					<div class="space-y-6">
+						<div>
+							<h3 class="text-xl font-semibold text-purple-600 mb-3">Unity Engine & C# Programming</h3>
+							<p class="text-gray-700 leading-relaxed mb-4">
+								The game was developed using Unity's 3D system with custom C# scripts for character movement, grappling mechanics, 
+								and physics interactions.
+							</p>
+							<ul class="list-disc list-inside text-gray-700 space-y-1">
+								<li>Custom character controller with state machine pattern</li>
+								<li>Physics-based rope simulation using Unity's Joint3D components</li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold text-purple-600 mb-3">Physics & Movement Systems</h3>
+							<p class="text-gray-700 leading-relaxed mb-4">
+								The core grappling mechanic utilizes Unity's physics engine to create realistic rope behavior and swinging dynamics. 
+							</p>
+							<ul class="list-disc list-inside text-gray-700 space-y-1">
+								<li>Line rendering for visual rope representation</li>
+								<li>Raycast-based grapple point detection</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Development Challenges -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Development Challenges</h2>
+					<div class="space-y-6">
+						<div class="border-l-4 border-purple-500 pl-6">
+							<h3 class="text-lg font-semibold text-gray-900 mb-2">Physics-Based Rope Mechanics</h3>
+							<p class="text-gray-700 mb-3">
+								<strong>Challenge:</strong> Creating realistic rope physics that felt responsive and intuitive to players.
+							</p>
+							<p class="text-gray-700">
+								<strong>Solution:</strong> Implemented a hybrid approach using Unity's Joint3D system combined with custom algorithms 
+								for rope tension and swing dynamics, achieving a balance between realism and gameplay feel.
+							</p>
+						</div>
+						<div class="border-l-4 border-purple-500 pl-6">
+							<h3 class="text-lg font-semibold text-gray-900 mb-2">Character State Management</h3>
+							<p class="text-gray-700 mb-3">
+								<strong>Challenge:</strong> Allowing the player to wall run, grapple, and crouch slide seamlessly.
+							</p>
+							<p class="text-gray-700">
+								<strong>Solution:</strong> Developed a state machine for the character controller that managed different movement states.
+							</p>
+						</div>
+						<div class="border-l-4 border-purple-500 pl-6">
+							<h3 class="text-lg font-semibold text-gray-900 mb-2">Level Design Balance</h3>
+							<p class="text-gray-700 mb-3">
+								<strong>Challenge:</strong> Creating levels that were challenging but not frustrating for players.
+							</p>
+							<p class="text-gray-700">
+								<strong>Solution:</strong> Implemented iterative playtesting with gradual difficulty progression, 
+								ensuring each level teaches new mechanics while building on previously learned skills.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Key Learnings & Impact -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Key Learnings & Impact</h2>
+					<div class="grid md:grid-cols-2 gap-6">
+						<div>
+							<h3 class="text-lg font-semibold text-purple-600 mb-3">Technical Skills Developed</h3>
+							<ul class="space-y-2 text-gray-700">
+								<li>• Unity 3D development and physics programming</li>
+								<li>• C# programming and design patterns</li>
+								<li>• Game state management and event systems</li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="text-lg font-semibold text-purple-600 mb-3">Game Design Insights</h3>
+							<ul class="space-y-2 text-gray-700">
+								<li>• Player feedback loops and intuitive control design</li>
+								<li>• Balancing challenge with accessibility</li>
+								<li>• Iterative design and playtesting methodologies</li>
+								<li>• Community engagement and feedback incorporation</li>
+								<li>• Publishing and distribution on itch.io platform</li>
+							</ul>
+						</div>
+					</div>
+					<div class="mt-8 bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-100">
+						<h3 class="text-xl font-semibold text-purple-900 mb-3">🚀 Project Impact</h3>
+						<p class="text-purple-800 leading-relaxed">
+							Grappling Around served as a comprehensive learning experience in game development, from initial concept 
+							to published prototype. The positive community reception and significant download count validated the 
+							design decisions and demonstrated the appeal of physics-based movement mechanics in platformer games.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>

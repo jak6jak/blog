@@ -1,0 +1,181 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import "../../styles/global.css";
+---
+
+<Layout>
+	<div class="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
+		<div class="container mx-auto px-6 py-12">
+			<div class="max-w-4xl mx-auto">
+				<!-- Back Navigation -->
+				<div class="mb-8">
+					<a href="/" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+						← Back to Home
+					</a>
+				</div>
+
+				<!-- Project Header -->
+				<div class="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl shadow-xl p-12 text-white mb-8">
+					<div class="max-w-3xl">
+						<h1 class="text-5xl font-bold mb-6">Movie Poll Website</h1>
+						<p class="text-2xl text-blue-100 mb-8">
+							An interactive polling platform that helps users decide what movie to watch next together.
+						</p>
+						<div class="flex flex-wrap gap-3 mb-8">
+							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">SvelteKit</span>
+							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">MongoDB Atlas</span>
+							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">Open Movie Database API</span>
+							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">JavaScript</span>
+							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">CSS</span>
+						</div>
+						<a href="https://voting.fly.dev/" target="_blank" 
+						   class="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-colors inline-flex items-center gap-2 shadow-lg">
+							🚀 Launch Project
+						</a>
+					</div>
+				</div>
+
+				<!-- Project Overview -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Project Overview</h2>
+					<p class="text-lg text-gray-700 leading-relaxed mb-6">
+						The Movie Poll Website is a full-stack web application that allows users to create and participate in movie-related polls. 
+						Built with modern web technologies, it features a unique user interface and robust backend functionality powered by external API integration.
+					</p>
+					<p class="text-lg text-gray-700 leading-relaxed">
+						The platform integrates with the Open Movie Database (OMDb) API to provide rich movie metadata, including posters, plot summaries, 
+						and other relevant information. This ensures that users have access to comprehensive movie information when creating or voting in polls.
+					</p>
+				</div>
+
+				<!-- Key Features -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
+					<div class="grid md:grid-cols-2 gap-6">
+						<div class="space-y-4">
+							<div class="flex items-start">
+								<div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+									<svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+										<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-semibold text-gray-900 mb-2">Interactive Polling System</h3>
+									<p class="text-gray-700">Create custom movie polls with multiple options and real-time voting capabilities</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+									<svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+										<path d="M7 4V2a1 1 0 011-1h4a1 1 0 011 1v2h4a1 1 0 110 2h-1v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6H3a1 1 0 110-2h4z"/>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-semibold text-gray-900 mb-2">Rich Movie Data</h3>
+									<p class="text-gray-700">Automatic movie information retrieval including posters, descriptions, and metadata</p>
+								</div>
+							</div>
+						</div>
+						<div class="space-y-4">
+							<div class="flex items-start">
+								<div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+									<svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+										<path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-semibold text-gray-900 mb-2">Responsive Design</h3>
+									<p class="text-gray-700">Optimized for all devices with a mobile-first approach and intuitive interface</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+									<svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+										<path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-xl font-semibold text-gray-900 mb-2">Cloud Database</h3>
+									<p class="text-gray-700">Persistent data storage with MongoDB Atlas for reliable poll and vote management</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Technical Implementation -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Technical Implementation</h2>
+					<div class="space-y-6">
+						<div>
+							<h3 class="text-xl font-semibold text-blue-600 mb-3">Frontend Development</h3>
+							<p class="text-gray-700 leading-relaxed mb-4">
+								Built with SvelteKit, the frontend leverages Svelte's reactive programming model to create a smooth, 
+								interactive user experience. The component-based architecture ensures maintainable code and reusable UI elements.
+							</p>
+							<ul class="list-disc list-inside text-gray-700 space-y-1">
+								<li>Reactive state management for real-time poll updates</li>
+								<li>Component-based architecture for modularity</li>
+								<li>Server-side rendering for improved SEO and performance</li>
+								<li>Modern CSS with responsive design principles</li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold text-blue-600 mb-3">Backend & Database</h3>
+							<p class="text-gray-700 leading-relaxed mb-4">
+								The backend utilizes MongoDB Atlas for cloud-based data persistence, ensuring scalability and reliability. 
+								RESTful API endpoints handle poll creation, voting, and data retrieval operations.
+							</p>
+							<ul class="list-disc list-inside text-gray-700 space-y-1">
+								<li>MongoDB Atlas for scalable cloud storage</li>
+								<li>RESTful API design for clean data operations</li>
+								<li>External API integration with OMDb</li>
+								<li>Data validation and error handling</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Challenges & Solutions -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Challenges & Solutions</h2>
+					<div class="space-y-6">
+						<div class="border-l-4 border-blue-500 pl-6">
+							<h3 class="text-lg font-semibold text-gray-900 mb-2">Real-time Updates</h3>
+							<p class="text-gray-700">
+								<strong>Challenge:</strong> Ensuring poll results update in real-time across multiple users.
+								<br><strong>Solution:</strong> Leveraged Socket.io for real-time communication, allowing instant updates to poll results without page refreshes.
+							</p>
+						</div>
+			
+					</div>
+				</div>
+
+				<!-- Key Learnings -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Key Learnings</h2>
+					<div class="grid md:grid-cols-2 gap-6">
+						<div>
+							<h3 class="text-lg font-semibold text-blue-600 mb-3">Technical Skills</h3>
+							<ul class="space-y-2 text-gray-700">
+								<li>• SvelteKit development and SSR implementation</li>
+								<li>• MongoDB Atlas cloud database management</li>
+								<li>• RESTful API design and external service integration</li>
+								<li>• Responsive web design and cross-platform compatibility</li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="text-lg font-semibold text-blue-600 mb-3">Soft Skills</h3>
+							<ul class="space-y-2 text-gray-700">
+								<li>• Project planning and feature prioritization</li>
+								<li>• Problem-solving and debugging complex issues</li>
+								<li>• User experience design considerations</li>
+								<li>• Performance optimization and scalability planning</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>

@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import "../../styles/global.css";
+---
+
+<Layout>
+	<div class="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
+		<div class="container mx-auto px-6 py-12">
+			<div class="max-w-4xl mx-auto">
+				<!-- Back Navigation -->
+				<div class="mb-8">
+					<a href="/about" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+						← Back to About
+					</a>
+				</div>
+
+				<!-- Header -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<div class="mb-6">
+						<h1 class="text-4xl font-bold text-blue-600 mb-2">Software Development Intern</h1>
+						<p class="text-xl text-gray-600 mb-4">Suran Inc • Versailles, KY • Summers 2018-2020</p>
+					</div>
+				</div>
+				
+				<!-- Key Accomplishments -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<h2 class="text-2xl font-bold text-gray-900 mb-6">Key Accomplishments</h2>
+					<ul class="space-y-4 text-gray-700">
+						<li class="flex items-start">
+							<span class="text-blue-500 mr-3 mt-1">•</span>
+							<span>Designed and implemented a daemon to update software for both Windows and Mac, allowing users to update without Admin privileges - significantly improving user experience and reducing IT support burden</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-blue-500 mr-3 mt-1">•</span>
+							<span>Created a button that exports reports into Excel format, providing users with readily accessible data for analysis and reporting</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-blue-500 mr-3 mt-1">•</span>
+							<span>Updated and created over 100 unit and integration tests to update API functionality, ensuring code sustainability and reliability</span>
+						</li>
+					</ul>
+				</div>
+				
+				<!-- Technologies Used -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+					<h2 class="text-2xl font-bold text-gray-900 mb-6">Technologies Used</h2>
+					<div class="flex flex-wrap gap-3">
+						<span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Omnis Studio</span>
+						<span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">VCS</span>
+					</div>
+				</div>
+				
+				<!-- Impact & Learning -->
+				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+					<h2 class="text-2xl font-bold text-gray-900 mb-6">Impact & Learning</h2>
+					<p class="text-gray-700 leading-relaxed">
+						This internship provided hands-on experience with cross-platform development and software maintenance. I learned the importance of automated testing, user experience design, and the challenges of enterprise software deployment. The experience strengthened my problem-solving skills and gave me insight into professional software development practices.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>
