@@ -1,0 +1,89 @@
+---
+export interface Props {
+  id: string;
+  title: string;
+  company: string;
+  location: string;
+  duration: string;
+  accomplishments: string[];
+  technologies?: string[];
+  impact?: string;
+  additionalSections?: Array<{
+    title: string;
+    content: string | Array<{title: string; description: string}>;
+    type?: 'text' | 'grid';
+  }>;
+  color: 'blue' | 'green' | 'purple';
+}
+
+const { id, title, company, location, duration, accomplishments, technologies, impact, additionalSections, color } = Astro.props;
+
+const colorClasses = {
+  blue: { text: 'text-blue-600', bg: 'bg-blue-100', textDark: 'text-blue-800', accent: 'text-blue-500' },
+  green: { text: 'text-green-600', bg: 'bg-green-100', textDark: 'text-green-800', accent: 'text-green-500' },
+  purple: { text: 'text-purple-600', bg: 'bg-purple-100', textDark: 'text-purple-800', accent: 'text-purple-500' }
+};
+
+const classes = colorClasses[color];
+---
+
+<div id={id} class="hidden">
+  <div class="mb-6">
+    <h3 class={`text-xl font-semibold ${classes.text} mb-2`}>{title}</h3>
+    <p class="text-gray-600 mb-4">{company} • {location} • {duration}</p>
+  </div>
+  
+  <div class="space-y-6">
+    <div>
+      <h4 class="text-lg font-semibold text-gray-900 mb-3">Key Accomplishments</h4>
+      <ul class="space-y-2 text-gray-700">
+        {accomplishments.map(accomplishment => (
+          <li class="flex items-start">
+            <span class={`${classes.accent} mr-2`}>•</span>
+            <span>{accomplishment}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+    
+    {technologies && (
+      <div>
+        <h4 class="text-lg font-semibold text-gray-900 mb-3">Technologies Used</h4>
+        <div class="flex flex-wrap gap-2">
+          {technologies.map(tech => (
+            <span class={`${classes.bg} ${classes.textDark} px-3 py-1 rounded-full text-sm`}>{tech}</span>
+          ))}
+        </div>
+      </div>
+    )}
+    
+    {additionalSections && additionalSections.map(section => (
+      <div>
+        <h4 class="text-lg font-semibold text-gray-900 mb-3">{section.title}</h4>
+        {section.type === 'grid' && Array.isArray(section.content) ? (
+          <div class="grid grid-cols-2 gap-4">
+            {section.content.map(item => (
+              <div class={`${classes.bg.replace('100', '50')} p-3 rounded-lg`}>
+                <h5 class={`font-medium ${classes.textDark}`}>{item.title}</h5>
+                <p class="text-sm text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        ) : section.type === 'text' && typeof section.content === 'string' ? (
+          <div class={`${classes.bg.replace('100', '50')} p-4 rounded-lg`}>
+            <p class="text-gray-700">{section.content}</p>
+          </div>
+        ) : typeof section.content === 'string' ? (
+          <p class="text-gray-700">{section.content}</p>
+        ) : null}
+      </div>
+    ))}
+    
+    {impact && (
+      <div>
+        <h4 class="text-lg font-semibold text-gray-900 mb-3">Impact & Learning</h4>
+        <p class="text-gray-700">{impact}</p>
+      </div>
+    )}
+  </div>
+</div>

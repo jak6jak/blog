@@ -1,0 +1,246 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Modal from '../components/Modal.astro';
+import ExperienceCard from '../components/ExperienceCard.astro';
+import ExperienceModal from '../components/ExperienceModal.astro';
+import "../styles/global.css";
+---
+
+<Layout>
+	<Modal id="experience-modal">
+		<div class="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
+		<div class="container mx-auto px-6 py-12">
+			<div class="max-w-4xl mx-auto">
+				<div class="text-center mb-12">
+					<img src="https://avatars.githubusercontent.com/u/6291339?v=4" 
+						 alt="Jacob Edie" 
+						 class="w-32 h-32 mx-auto mb-6 rounded-full shadow-lg object-cover">
+					<h1 class="text-5xl font-bold text-gray-900 mb-4">Jacob Edie</h1>
+					<p class="text-xl text-gray-600 max-w-2xl mx-auto">
+						Computer Science Student & Software Developer
+					</p>
+				</div>
+
+				<div class="grid gap-8 md:gap-12">
+					<section class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">About Me</h2>
+						<p class="text-lg text-gray-700 leading-relaxed">
+							I'm a highly motivated Computer Science student at Morehead State University with a strong foundation in C#, C++, Java, and SQL. 
+							I have practical experience in software development, customer service, and technical instruction, with a passion for leveraging 
+							my technical skills to solve challenging problems and create meaningful solutions.
+						</p>
+					</section>
+
+					<section class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">Experience</h2>
+						<div class="space-y-6">
+							<ExperienceCard
+								title="Software Development Intern"
+								company="Suran Inc"
+								location="Versailles, KY"
+								duration="Summers 2018-2020"
+								responsibilities={[
+									"Designed and implemented a daemon to update software for Windows and Mac without Admin privileges",
+									"Created export functionality to Excel for improved data accessibility",
+									"Updated and created over 100 unit and integration tests for API sustainability"
+								]}
+								color="blue"
+								modalId="experience-modal"
+								contentId="suran-modal"
+							/>
+							
+							<ExperienceCard
+								title="STEM Coach"
+								company="Delaware STEAM Academy"
+								location="Remote"
+								duration="June 2021 - July 2024"
+								responsibilities={[
+									"Taught and designed ACSL, Roblox, and Unity3D course lessons",
+									"Received multiple 5-star reviews from parents and students"
+								]}
+								color="green"
+								modalId="experience-modal"
+								contentId="stem-modal"
+							/>
+							
+							<ExperienceCard
+								title="Catering Service Worker"
+								company="Aramark"
+								location="Morehead, KY"
+								duration="November 2024 - Present"
+								responsibilities={[
+									"Efficiently helped setup of dining areas, buffet displays and beverage stations",
+									"Ensured timely and organized post-event breakdown and cleanup"
+								]}
+								color="purple"
+								modalId="experience-modal"
+								contentId="aramark-modal"
+							/>
+						</div>
+					</section>
+
+					<section class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">Skills & Technologies</h2>
+						<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+							<div class="text-center p-4 bg-purple-50 rounded-xl">
+								<div class="text-2xl mb-2">💜</div>
+								<span class="text-sm font-medium text-purple-900">C#</span>
+							</div>
+							<div class="text-center p-4 bg-blue-50 rounded-xl">
+								<div class="text-2xl mb-2">⚡</div>
+								<span class="text-sm font-medium text-blue-900">C++</span>
+							</div>
+							<div class="text-center p-4 bg-orange-50 rounded-xl">
+								<div class="text-2xl mb-2">☕</div>
+								<span class="text-sm font-medium text-orange-900">Java</span>
+							</div>
+							<div class="text-center p-4 bg-green-50 rounded-xl">
+								<div class="text-2xl mb-2">🎮</div>
+								<span class="text-sm font-medium text-green-900">Unity</span>
+							</div>
+							<div class="text-center p-4 bg-red-50 rounded-xl">
+								<div class="text-2xl mb-2">🔥</div>
+								<span class="text-sm font-medium text-red-900">Git</span>
+							</div>
+							<div class="text-center p-4 bg-indigo-50 rounded-xl">
+								<div class="text-2xl mb-2">💻</div>
+								<span class="text-sm font-medium text-indigo-900">Visual Studio</span>
+							</div>
+							<div class="text-center p-4 bg-teal-50 rounded-xl">
+								<div class="text-2xl mb-2">🗃️</div>
+								<span class="text-sm font-medium text-teal-900">SQL</span>
+							</div>
+							<div class="text-center p-4 bg-yellow-50 rounded-xl">
+								<div class="text-2xl mb-2">🌙</div>
+								<span class="text-sm font-medium text-yellow-900">Lua</span>
+							</div>
+						</div>
+					</section>
+
+					<section class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">Featured Projects</h2>
+						<div class="grid md:grid-cols-2 gap-6">
+							<div class="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-100">
+								<h3 class="text-xl font-semibold text-blue-900 mb-3">Movie Poll Website</h3>
+								<p class="text-blue-800 mb-4">A polling website specializing in movies, populated with data from Open Movie Database. Built with SvelteKit and MongoDB Atlas.</p>
+								<a href="https://voting.fly.dev/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium">View Project →</a>
+							</div>
+							<div class="p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl border border-purple-100">
+								<h3 class="text-xl font-semibold text-purple-900 mb-3">Grappling Around</h3>
+								<p class="text-purple-800 mb-4">A Unity game featuring hook-shot mechanics for swinging gameplay. Prototype has over 1,600 downloads on itch.io.</p>
+								<a href="https://jacobedie.itch.io/grapling-around" target="_blank" class="text-purple-600 hover:text-purple-800 font-medium">Play Game →</a>
+							</div>
+						</div>
+					</section>
+
+					<section class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">Education</h2>
+						<div class="border-l-4 border-red-500 pl-6">
+							<h3 class="text-xl font-semibold text-gray-900">Bachelor of Science in Computer Science</h3>
+							<p class="text-red-600 font-medium mb-2">Morehead State University</p>
+							<p class="text-gray-700"><strong>Relevant Courses:</strong> Intro to Database Systems, Algorithms & Advanced Data Structures, Advanced Java Programming, Calculus II</p>
+						</div>
+					</section>
+
+					<section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl shadow-lg p-8 text-white">
+						<h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
+						<p class="text-lg mb-8 text-blue-100">
+							I'm always interested in new opportunities and collaborations. 
+							Feel free to reach out if you'd like to discuss a project or just chat about tech!
+						</p>
+						<div class="flex flex-wrap gap-4">
+							<a href="mailto:jacobedie1@gmail.com" 
+							   class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center gap-2">
+								📧 email.gmail@com
+							</a>
+							<a href="https://github.com/jak6jak" target="_blank"
+							   class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+								🐙 GitHub Profile
+							</a>
+							<a href="tel:606-356-8448" 
+							   class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+								📱 65959-43394-334
+							</a>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		</div>
+	</Modal>
+
+	<ExperienceModal
+		id="suran-modal"
+		title="Software Development Intern"
+		company="Suran Inc"
+		location="Versailles, KY"
+		duration="Summers 2018-2020"
+		accomplishments={[
+			"Designed and implemented a daemon to update software for both Windows and Mac, allowing users to update without Admin privileges - significantly improving user experience and reducing IT support burden",
+			"Created a button that exports reports into Excel format, providing users with readily accessible data for analysis and reporting",
+			"Updated and created over 100 unit and integration tests to update API functionality, ensuring code sustainability and reliability"
+		]}
+		technologies={["C#", "Windows Development", "macOS Development", "API Development", "Unit Testing", "Excel Integration"]}
+		impact="This internship provided hands-on experience with cross-platform development and software maintenance. I learned the importance of automated testing, user experience design, and the challenges of enterprise software deployment. The experience strengthened my problem-solving skills and gave me insight into professional software development practices."
+		color="blue"
+	/>
+
+	<ExperienceModal
+		id="stem-modal"
+		title="STEM Coach"
+		company="Delaware STEAM Academy"
+		location="Remote"
+		duration="June 2021 - July 2024"
+		accomplishments={[
+			"Designed and taught comprehensive ACSL (American Computer Science League) programming courses, covering algorithms, data structures, and competitive programming concepts",
+			"Created engaging Roblox development courses using Lua scripting, teaching students game development fundamentals and programming logic",
+			"Developed Unity3D course curriculum covering game engine basics, C# scripting, and 3D game development principles"
+		]}
+		additionalSections={[
+			{
+				title: "Student Success",
+				content: "⭐⭐⭐⭐⭐ Consistently Excellent Reviews\n\nReceived multiple 5-star reviews from both parents and students, demonstrating effective teaching methods and strong communication skills.",
+				type: "text"
+			},
+			{
+				title: "Subjects Taught",
+				content: [
+					{ title: "ACSL Programming", description: "Competitive programming concepts and problem-solving" },
+					{ title: "Roblox Development", description: "Lua scripting and game development" },
+					{ title: "Unity3D", description: "Game engine and C# programming" },
+					{ title: "Problem Solving", description: "Algorithmic thinking and logic" }
+				],
+				type: "grid"
+			}
+		]}
+		color="green"
+	/>
+
+	<ExperienceModal
+		id="aramark-modal"
+		title="Catering Service Worker"
+		company="Aramark"
+		location="Morehead, KY"
+		duration="November 2024 - Present"
+		accomplishments={[
+			"Efficiently coordinate and execute setup of dining areas, ensuring optimal layout and presentation for various events and gatherings",
+			"Manage buffet displays with attention to food safety, visual appeal, and accessibility for guests",
+			"Set up and maintain beverage stations, ensuring proper equipment functionality and adequate supplies",
+			"Execute timely and organized post-event breakdown and cleanup, maintaining high standards of cleanliness and organization"
+		]}
+		additionalSections={[
+			{
+				title: "Skills Developed",
+				content: [
+					{ title: "Time Management", description: "Coordinating multiple tasks under tight deadlines" },
+					{ title: "Teamwork", description: "Collaborating effectively with team members" },
+					{ title: "Customer Service", description: "Ensuring positive guest experiences" },
+					{ title: "Attention to Detail", description: "Maintaining high standards of presentation" }
+				],
+				type: "grid"
+			}
+		]}
+		impact="This position allows me to develop valuable soft skills while maintaining a flexible schedule that accommodates my computer science studies. The role has strengthened my ability to work under pressure, communicate effectively with diverse teams, and maintain high standards of service quality."
+		color="purple"
+	/>
+</Layout>

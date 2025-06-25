@@ -1,0 +1,72 @@
+---
+export interface Props {
+  title: string;
+  company: string;
+  location: string;
+  duration: string;
+  responsibilities: string[];
+  color: 'blue' | 'green' | 'purple';
+  modalId: string;
+  contentId: string;
+}
+
+const { title, company, location, duration, responsibilities, color, modalId, contentId } = Astro.props;
+
+const colorClasses = {
+  blue: {
+    border: 'border-blue-500',
+    hover: 'hover:bg-blue-50',
+    text: 'text-blue-600',
+    hoverText: 'hover:text-blue-600',
+    accent: 'text-blue-500'
+  },
+  green: {
+    border: 'border-green-500',
+    hover: 'hover:bg-green-50',
+    text: 'text-green-600',
+    hoverText: 'hover:text-green-600',
+    accent: 'text-green-500'
+  },
+  purple: {
+    border: 'border-purple-500',
+    hover: 'hover:bg-purple-50',
+    text: 'text-purple-600',
+    hoverText: 'hover:text-purple-600',
+    accent: 'text-purple-500'
+  }
+};
+
+const classes = colorClasses[color];
+---
+
+<div 
+  class={`border-l-4 ${classes.border} pl-6 cursor-pointer ${classes.hover} p-4 rounded-r-lg transition-colors experience-card`}
+  data-modal-id={modalId}
+  data-content-id={contentId}
+>
+  <h3 class={`text-xl font-semibold text-gray-900 ${classes.hoverText}`}>{title}</h3>
+  <p class={`${classes.text} font-medium`}>{company} • {location} • {duration}</p>
+  <ul class="text-gray-700 mt-2 space-y-1">
+    {responsibilities.map(responsibility => (
+      <li>• {responsibility}</li>
+    ))}
+  </ul>
+  <p class={`${classes.accent} text-sm mt-2 font-medium`}>Click for more details →</p>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.experience-card');
+    
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const modalId = card.getAttribute('data-modal-id');
+        const contentId = card.getAttribute('data-content-id');
+        
+        if (modalId && contentId && (window as any).openModal) {
+          (window as any).openModal(modalId, contentId);
+        }
+      });
+    });
+  });
+</script>

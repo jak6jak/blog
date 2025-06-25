@@ -1,0 +1,173 @@
+---
+export interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<!-- Mobile Modal (overlay) -->
+<div id={`${id}-overlay`} class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 modal-overlay lg:hidden">
+  <div class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto modal-content">
+      <div class="p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-3xl font-bold text-gray-900 modal-title"></h2>
+          <button class="text-gray-500 hover:text-gray-700 text-2xl modal-close">×</button>
+        </div>
+        <div class="text-gray-700 leading-relaxed modal-body">
+          <!-- Modal content will be inserted here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Desktop Side Panel -->
+<div id={`${id}-sidepanel`} class="fixed top-0 right-0 h-full w-1/2 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 modal-sidepanel hidden lg:block">
+  <div class="h-full overflow-y-auto">
+    <div class="p-8">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-3xl font-bold text-gray-900 modal-title"></h2>
+        <button class="text-gray-500 hover:text-gray-700 text-2xl modal-close">×</button>
+      </div>
+      <div class="text-gray-700 leading-relaxed modal-body">
+        <!-- Modal content will be inserted here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Desktop Content Push Container -->
+<div id="content-container" class="transition-transform duration-300 ease-in-out">
+  <slot />
+</div>
+
+<script>
+  class ModalManager {
+    constructor() {
+      this.bindEvents();
+    }
+
+    bindEvents() {
+      // Handle modal close buttons
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        if (target.classList.contains('modal-close')) {
+          this.closeModal();
+        }
+        
+        // Close modal when clicking overlay (mobile only)
+        if (target.classList.contains('modal-overlay')) {
+          this.closeModal();
+        }
+      });
+
+      // Handle escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          this.closeModal();
+        }
+      });
+
+      // Prevent modal content clicks from closing modal
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        if (target.classList.contains('modal-content')) {
+          e.stopPropagation();
+        }
+      });
+    }
+
+    isDesktop() {
+      return window.innerWidth >= 1024; // lg breakpoint
+    }
+
+    openModal(modalId: string, contentId: string) {
+      const content = document.getElementById(contentId);
+      if (!content) return;
+
+      if (this.isDesktop()) {
+        this.openSidePanel(modalId, content);
+      } else {
+        this.openMobileModal(modalId, content);
+      }
+    }
+
+    openMobileModal(modalId: string, content: HTMLElement) {
+      const overlay = document.getElementById(`${modalId}-overlay`);
+      if (overlay) {
+        const modalBody = overlay.querySelector('.modal-body');
+        if (modalBody) {
+          modalBody.innerHTML = content.innerHTML;
+          overlay.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+    }
+
+    openSidePanel(modalId: string, content: HTMLElement) {
+      const sidepanel = document.getElementById(`${modalId}-sidepanel`);
+      const contentContainer = document.getElementById('content-container');
+      
+      if (sidepanel && contentContainer) {
+        const modalBody = sidepanel.querySelector('.modal-body');
+        if (modalBody) {
+          modalBody.innerHTML = content.innerHTML;
+          
+          // Show the sidepanel and slide it in
+          sidepanel.classList.remove('hidden');
+          requestAnimationFrame(() => {
+            sidepanel.classList.remove('translate-x-full');
+            // Push content to the left by 50% (half screen width)
+            contentContainer.style.transform = 'translateX(-25%)';
+          });
+        }
+      }
+    }
+
+    closeModal() {
+      if (this.isDesktop()) {
+        this.closeSidePanel();
+      } else {
+        this.closeMobileModal();
+      }
+    }
+
+    closeMobileModal() {
+      const overlays = document.querySelectorAll('.modal-overlay');
+      overlays.forEach(overlay => {
+        overlay.classList.add('hidden');
+      });
+      document.body.style.overflow = 'auto';
+    }
+
+    closeSidePanel() {
+      const sidepanels = document.querySelectorAll('.modal-sidepanel');
+      const contentContainer = document.getElementById('content-container');
+      
+      sidepanels.forEach(sidepanel => {
+        sidepanel.classList.add('translate-x-full');
+        setTimeout(() => {
+          sidepanel.classList.add('hidden');
+        }, 300);
+      });
+      
+      if (contentContainer) {
+        contentContainer.style.transform = 'translateX(0)';
+      }
+    }
+  }
+
+  // Initialize modal manager when DOM is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    (window as any).modalManager = new ModalManager();
+  });
+
+  // Global function for opening modals
+  (window as any).openModal = function(modalId: string, contentId: string) {
+    if ((window as any).modalManager) {
+      (window as any).modalManager.openModal(modalId, contentId);
+    }
+  };
+</script>

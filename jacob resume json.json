@@ -1,0 +1,378 @@
+{
+  "basics": {
+    "name": "Jacob Edie",
+    "headline": "",
+    "email": "jacobedie1@gmail.com",
+    "phone": "606-356-8448",
+    "location": "",
+    "url": {
+      "label": "",
+      "href": ""
+    },
+    "customFields": [],
+    "picture": {
+      "url": "https://avatars.githubusercontent.com/u/6291339?v=4",
+      "size": 64,
+      "aspectRatio": 1,
+      "borderRadius": 0,
+      "effects": {
+        "hidden": true,
+        "border": false,
+        "grayscale": false
+      }
+    }
+  },
+  "sections": {
+    "summary": {
+      "name": "Summary",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "summary",
+      "content": "<p>Highly motivated Computer Science student with a strong foundation in C#, C++, Java, and SQL, complemented by practical experience in software development, customer service, and technical instruction. Seeking to leverage technical skills and soft skills in a challenging role.</p>"
+    },
+    "awards": {
+      "name": "Awards",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "awards",
+      "items": []
+    },
+    "certifications": {
+      "name": "Certifications",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "certifications",
+      "items": []
+    },
+    "education": {
+      "name": "Education",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "education",
+      "items": [
+        {
+          "id": "y9d89k3j89bakj20u9id8bfn",
+          "visible": true,
+          "institution": "Morehead State University",
+          "studyType": "BS",
+          "area": "Computer Science",
+          "score": "",
+          "date": "",
+          "summary": "<ul><li><p><strong>Relevant Courses:</strong> Intro to Database Systems, Algorithms &amp; Advanced Data Structures, Advanced Java Programming, Calculus II</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "bju0fhjz5kexz0bcgu8yzy4w",
+          "visible": false,
+          "institution": "University of Kentucky",
+          "studyType": "BS",
+          "area": "Computer Science",
+          "score": "",
+          "date": "",
+          "summary": "",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "experience": {
+      "name": "Experience",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "experience",
+      "items": [
+        {
+          "id": "cy6xys8thl4x13658jjwt06s",
+          "visible": true,
+          "company": "Suran Inc",
+          "position": "Intern",
+          "location": "Versailles, KY",
+          "date": "Summers 2018-2020",
+          "summary": "<ul><li><p>Designed and implemented a daemon to update software for both Windows and Mac, so users do not need Admin privileges to update.</p></li><li><p>Created a button that exports a report into Excel so users can access data readily.</p></li><li><p>Updated and created over 100 unit and integration tests to update API for code sustainability.</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "bsteidwdw6csnqcal2b4870w",
+          "visible": true,
+          "company": "STEM Coach",
+          "position": "Delaware STEAM Academy",
+          "location": "Remote",
+          "date": "June 2021 - July 2024",
+          "summary": "<ul><li><p>Taught and designed upper and lower-level ACSL, Roblox, and Unity3d course lessons.</p></li><li><p>Received multiple 5-star reviews from parents and students.</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "bju0di1724lznris3q9f64yr",
+          "visible": true,
+          "company": "Aramark",
+          "position": "Catering Service Worker",
+          "location": "Morehead, KY",
+          "date": "November 2024 - Present",
+          "summary": "<ul><li><p>Efficiently helped setup of dining areas, buffet displays and beverage stations</p></li><li><p>Ensured timely and organized post-event breakdown and cleanup.</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "volunteer": {
+      "name": "Volunteering",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "volunteer",
+      "items": []
+    },
+    "interests": {
+      "name": "Interests",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "interests",
+      "items": []
+    },
+    "languages": {
+      "name": "Languages",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "languages",
+      "items": []
+    },
+    "profiles": {
+      "name": "Profiles",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "profiles",
+      "items": [
+        {
+          "id": "lr9o61wg7ykyo7tcxc3u5v6f",
+          "visible": true,
+          "network": "Github",
+          "username": "jak6jak",
+          "icon": "github",
+          "url": {
+            "label": "",
+            "href": "https://github.com/jak6jak"
+          }
+        }
+      ]
+    },
+    "projects": {
+      "name": "Projects",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "projects",
+      "items": [
+        {
+          "id": "wn4j3pw2aul64ry3o6y5qjav",
+          "visible": true,
+          "name": "Movie Poll Website",
+          "description": "",
+          "date": "February 2021",
+          "summary": "<ul><li><p>Designed and implemented a polling website that specializes in movies. Populates data from Open Movie Database. Created with Svelte kit and MongoDB Atlas&nbsp;</p></li></ul>",
+          "keywords": [],
+          "url": {
+            "label": "",
+            "href": "https://voting.fly.dev/"
+          }
+        },
+        {
+          "id": "fnt69aj965i31fj7jun600mz",
+          "visible": true,
+          "name": "Grappling Around",
+          "description": "",
+          "date": "April 2020",
+          "summary": "<ul><li><p>Created a game using Unity Game Engine that involves swinging around using a hook-shot.&nbsp;</p></li><li><p>Prototype has over 1,600 downloads on <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://itch.io\"><u>itch.io</u></a></p></li></ul>",
+          "keywords": [],
+          "url": {
+            "label": "",
+            "href": "https://jacobedie.itch.io/grapling-around"
+          }
+        }
+      ]
+    },
+    "publications": {
+      "name": "Publications",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "publications",
+      "items": []
+    },
+    "references": {
+      "name": "References",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "references",
+      "items": []
+    },
+    "skills": {
+      "name": "Skills",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "skills",
+      "items": [
+        {
+          "id": "ch25sle126tmm2g1ynvgrjdk",
+          "visible": true,
+          "name": "C#",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "wj8sloqsf23ux4c8chtttzc4",
+          "visible": false,
+          "name": "Svelte",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "ewku1agcsxlz1ztjwvrxui5y",
+          "visible": false,
+          "name": "C++",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "kzg8ippkodwlfwle3is1r29j",
+          "visible": true,
+          "name": "Unity",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "z25ylkg1wqtneoqgq8zcy8ik",
+          "visible": true,
+          "name": "Git",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "r04eesl7wlvs26uwmqsn4dra",
+          "visible": true,
+          "name": "Visual Studio",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "padehb6lbbm4k26txv6v8p9b",
+          "visible": true,
+          "name": "Customer Service",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "xnr9s2whsn1a2uc55rvvqhhi",
+          "visible": true,
+          "name": "Time Management",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "n7bz61g6eyf4veull06ojl8g",
+          "visible": true,
+          "name": "Teamwork",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "zjc61zgw60f090xypgqqnlru",
+          "visible": false,
+          "name": "Lua",
+          "description": "Taught Roblox classes as STEM Coach",
+          "level": 0,
+          "keywords": []
+        }
+      ]
+    },
+    "custom": {}
+  },
+  "metadata": {
+    "template": "bronzor",
+    "layout": [
+      [
+        [
+          "profiles",
+          "summary",
+          "experience",
+          "education",
+          "projects",
+          "volunteer",
+          "references"
+        ],
+        [
+          "skills",
+          "interests",
+          "certifications",
+          "awards",
+          "publications",
+          "languages"
+        ]
+      ]
+    ],
+    "css": {
+      "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}",
+      "visible": false
+    },
+    "page": {
+      "margin": 18,
+      "format": "a4",
+      "options": {
+        "breakLine": true,
+        "pageNumbers": true
+      }
+    },
+    "theme": {
+      "background": "#ffffff",
+      "text": "#000000",
+      "primary": "#dc2626"
+    },
+    "typography": {
+      "font": {
+        "family": "IBM Plex Serif",
+        "subset": "latin",
+        "variants": [
+          "regular",
+          "italic",
+          "600"
+        ],
+        "size": 14
+      },
+      "lineHeight": 1.5,
+      "hideIcons": false,
+      "underlineLinks": true
+    },
+    "notes": ""
+  }
+}
