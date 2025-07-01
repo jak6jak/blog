@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectCard from './ProjectCard.astro';
+
+// Get all projects and sort them (you can customize this logic)
+const allProjects = await getCollection('projects');
+
+// Define featured projects in the order you want them displayed (using slugs)
+const featuredProjectSlugs = ['godot-grapple-hook', 'movie-poll', 'grappling-around'] as const;
+
+// Get featured projects in the specified order
+const featuredProjects = featuredProjectSlugs.map(slug => 
+  allProjects.find(project => project.slug === slug)
+).filter((project): project is NonNullable<typeof project> => project !== undefined);
+
+// Project descriptions for the cards (since they're not in the frontmatter)
+const projectDescriptions: Record<string, string> = {
+  'godot-grapple-hook': 'A Godot project showcasing advanced grappling hook mechanics implemented using Verlet integration.',
+  'movie-poll': 'A polling website specializing in movies, populated with data from Open Movie Database. Built with modern web technologies for seamless user experience.',
+  'grappling-around': 'A Unity game featuring grappling gun mechanics for dynamic swinging gameplay. The prototype has attracted over 3,000+ downloads on itch.io.'
+};
+
+// External URLs for projects
+const externalUrls: Record<string, string> = {
+  'godot-grapple-hook': 'https://github.com/jak6jak/Godot-Grappling-Hook',
+  'movie-poll': 'https://voting.fly.dev/',
+  'grappling-around': 'https://jacobedie.itch.io/grapling-around'
+};
+
+// External button text
+const externalButtonTexts: Record<string, string> = {
+  'godot-grapple-hook': 'View Code →',
+  'movie-poll': 'View Website →',
+  'grappling-around': 'Play Game →'
+};
+---
+
+<section class="py-20 px-6">
+  <div class="container mx-auto max-w-6xl">
+    <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Featured Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      {featuredProjects.map((project) => (
+        <ProjectCard
+          title={project.data.title}
+          subtitle={project.data.subtitle}
+          description={projectDescriptions[project.slug] || ''}
+          tags={project.data.tags}
+          gradientColor={project.data.gradientColor || 'from-gray-500 to-gray-600'}
+          accentColor={project.data.accentColor || 'text-gray-600'}
+          projectSlug={project.slug}
+          externalUrl={externalUrls[project.slug]}
+          externalButtonText={externalButtonTexts[project.slug]}
+        />
+      ))}
+    </div>
+  </div>
+</section>
