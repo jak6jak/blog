@@ -11,7 +11,9 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
+.markdown-content-cards hr{
+  border: none;
+}
 /* Images should not have card styling */
 .markdown-content-cards img,
 .markdown-content-cards {

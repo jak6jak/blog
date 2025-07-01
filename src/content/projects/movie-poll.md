@@ -19,6 +19,8 @@ The Movie Poll Website is a full-stack web application that allows users to crea
 
 The platform integrates with the Open Movie Database (OMDb) API to provide rich movie metadata, including posters, plot summaries, and other relevant information. This ensures that users have access to comprehensive movie information when creating or voting in polls.
 
+---
+
 # Key Features
 
 | Feature | Description |
@@ -49,8 +51,10 @@ The backend utilizes MongoDB Atlas for cloud-based data persistence, ensuring sc
 # Challenges & Solutions
 
 ### Real-time Updates
-**Challenge:** Ensuring poll results update in real-time across multiple users.
-**Solution:** Leveraged Socket.io for real-time communication, allowing instant updates to poll results without page refreshes.
+#### Challenge: 
+Ensuring poll results update in real-time across multiple users.
+#### Solution: 
+Leveraged Socket.io for real-time communication, allowing instant updates to poll results without page refreshes.
 
 # Key Learnings
 

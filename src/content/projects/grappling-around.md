@@ -56,16 +56,22 @@ The core grappling mechanic utilizes Unity's physics engine to create realistic 
 # Development Challenges
 
 ## Physics-Based Rope Mechanics
-**Challenge:** Creating realistic rope physics that felt responsive and intuitive to players.
-**Solution:** Implemented a hybrid approach using Unity's Joint3D system combined with custom algorithms for rope tension and swing dynamics, achieving a balance between realism and gameplay feel.
+### Challenge: 
+Creating realistic rope physics that felt responsive and intuitive to players.
+### Solution: 
+Implemented a hybrid approach using Unity's Joint3D system combined with custom algorithms for rope tension and swing dynamics, achieving a balance between realism and gameplay feel.
 
 ## Character State Management
-**Challenge:** Allowing the player to wall run, grapple, and crouch slide seamlessly.
-**Solution:** Developed a state machine for the character controller that managed different movement states.
+### Challenge: 
+Allowing the player to wall run, grapple, and crouch slide seamlessly.
+### Solution:
+Developed a state machine for the character controller that managed different movement states.
 
 ## Level Design Balance
-**Challenge:** Creating levels that were challenging but not frustrating for players.
-**Solution:** Implemented iterative playtesting with gradual difficulty progression, ensuring each level teaches new mechanics while building on previously learned skills.
+### Challenge:
+Creating levels that were challenging but not frustrating for players.
+### Solution: 
+Implemented iterative playtesting with gradual difficulty progression, ensuring each level teaches new mechanics while building on previously learned skills.
 
 ---
 

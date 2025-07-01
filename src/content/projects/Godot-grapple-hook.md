@@ -13,8 +13,6 @@ secondaryHex: "#0d9488"
 accentLightHex: "#ccfbf1"
 ---
 
----
-
 # Project Overview
 I wanted to create a game that showcased basic grappling hook mechanics using the Godot engine. This project demonstrates the implementation of smooth swinging mechanics similar to those found in my previous project, Grappling Around.
 
@@ -47,14 +45,18 @@ The core grappling mechanic utilizes Verlet integration to constrain the player'
 # Challenges and Solutions
 
 ### Physics-Based Rope Mechanics
-**Challenge:** Godot's built-in physics Joint system is unintuitive and difficult to work with, especially for creating realistic rope-like mechanics that feel responsive to player input.
+#### Challenge: 
+Godot's built-in physics Joint system is unintuitive and difficult to work with, especially for creating realistic rope-like mechanics that feel responsive to player input.
 
-**Solution:** I implemented Verlet integration as an alternative approach to create rope-like constraints. This method provides more control over the physics simulation and results in smoother, more predictable swinging mechanics that feel natural to the player.
+#### Solution:
+I implemented Verlet integration as an alternative approach to create rope-like constraints. This method provides more control over the physics simulation and results in smoother, more predictable swinging mechanics that feel natural to the player.
 
 ### Maintaining Code Clarity
-**Challenge:** Balancing functional complexity with educational value - ensuring the code remains understandable for learning purposes without sacrificing the quality of the grappling mechanics.
+#### Challenge:
+Balancing functional complexity with educational value - ensuring the code remains understandable for learning purposes without sacrificing the quality of the grappling mechanics.
 
-**Solution:** I structured the code with extensive comments, clear variable naming conventions, and modular design patterns. Each major function includes explanations of its purpose and how it contributes to the overall grappling system.
+#### Solution: 
+I structured the code with extensive comments, clear variable naming conventions, and modular design patterns. Each major function includes explanations of its purpose and how it contributes to the overall grappling system.
 
 # Key Learnings
 This project provided valuable experience in several key areas:
