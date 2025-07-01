@@ -1,151 +1,130 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import "../../styles/global.css";
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
 import grapplingImage from '../../assets/grappling-around-image.png';
 ---
 
-<Layout>
-	<div class="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
-		<div class="container mx-auto px-6 py-12">
-			<div class="max-w-4xl mx-auto">
+<ProjectLayout
+  title="Godot Grapple Hook Demo"
+  subtitle="A Godot game featuring how to create a grappling hook using Verlet integration for smooth swinging mechanics."
+  tags={["Godot", "GDSCript", "Physics Programming", "Tutorial"]}
+  codeUrl="https://github.com/jak6jak/Godot-Grappling-Hook"
+  primaryColor="green"
+  secondaryColor="green"
+  gradientColor="from-teal-500 to-green-500"
+  accentColor="text-green-600"
+  accentBg="bg-green-100"
+>
+  {/* Project Overview */}
+  <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Project Overview</h2>
+    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+      I wanted to create a game that showcased basic grappling hook mechanics using the Godot engine. This is similar to the mechanics 
+      found in my previous project, Grappling Around.
+    </p>
+    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+      I implemented this project using Godot's GDScript language, focusing on the essential mechanics of a grappling hook system. I wanted the project to be easy to follow in case I decided to create a tutorial.
+    </p>
+  </div>
 
-				<!-- Project Header -->
-				<div class="bg-gradient-to-br from-teal-500 to-green-500 rounded-2xl shadow-xl p-12 text-white mb-8">
-					<div class="max-w-3xl">
-						<h1 class="text-5xl font-bold mb-6">Godot Grapple Hook Demo</h1>
-						<p class="text-2xl text-green-100 mb-8">
-							A Godot game featuring how to create a grappling hook using Verlet integration for smooth swinging mechanics.
-						</p>
-						<div class="flex flex-wrap gap-3 mb-8">
-							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">Godot</span>
-							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">GDSCript</span>
-							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">Physics Programming</span>
-							<span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">Tutorial</span>
-						</div>
-						<div class="flex flex-wrap gap-4">
-							<a href="https://jacobedie.itch.io/grapling-around" target="_blank" 
-							   class="bg-white text-green-600 px-8 py-4 rounded-xl font-semibold hover:bg-green-50 transition-colors inline-flex items-center gap-2 shadow-lg">
-								View Code
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- Project Overview -->
-				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
-					<h2 class="text-3xl font-bold text-gray-900 mb-6">Project Overview</h2>
-					<p class="text-lg text-gray-700 leading-relaxed mb-6">
-						I wanted to create a game that showcased basic grappling hook mechanics using the Godot engine. This is similar to the mechanics 
-						found in my previous project, Grappling Around.
-					</p>
-					<p class="text-lg text-gray-700 leading-relaxed mb-6">
-						I implemented this project using Godot's GDScript language, focusing on the essential mechanics of a grappling hook system. I wanted the project to be easy to follow in case I decided to create a tutorial.
-					</p>
-				</div>
+  {/* Core Mechanics */}
+  <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Core Goals</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="space-y-6">
+        <div class="flex items-start">
+          <div class="bg-green-100 rounded-full p-3 mr-4 mt-1">
+            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Grappling Gun System</h3>
+            <p class="text-gray-700">Physics-based grappling hook with realistic rope dynamics and swing mechanics</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="bg-green-100 rounded-full p-3 mr-4 mt-1">
+            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Straightforward Design</h3>
+            <p class="text-gray-700">I wanted the project to be used as a learning resource, so I made sure to include plenty of comments and explanations throughout the code.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-				<!-- Core Mechanics -->
-				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
-					<h2 class="text-3xl font-bold text-gray-900 mb-6">Core Goals</h2>
-					<div class="grid md:grid-cols-2 gap-6">
-						<div class="space-y-6">
-							<div class="flex items-start">
-								<div class="bg-green-100 rounded-full p-3 mr-4 mt-1">
-									<svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-										<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
-									</svg>
-								</div>
-								<div>
-									<h3 class="text-xl font-semibold text-gray-900 mb-2">Grappling Gun System</h3>
-									<p class="text-gray-700">Physics-based grappling hook with realistic rope dynamics and swing mechanics</p>
-								</div>
-							</div>
-							<div class="flex items-start">
-								<div class="bg-green-100 rounded-full p-3 mr-4 mt-1">
-									<svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-										<path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
-									</svg>
-								</div>
-								<div>
-									<h3 class="text-xl font-semibold text-gray-900 mb-2">Straightforward Design</h3>
-									<p class="text-gray-700">I wanted the project to be used as a learning resource, so I made sure to include plenty of comments and explanations throughout the code.</p>
-								</div>
-							</div>
-						</div>
+  {/* Technical Implementation */}
+  <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Technical Implementation</h2>
+    <div class="space-y-6">
+      <div>
+        <h3 class="text-xl font-semibold text-green-600 mb-3">Godot GDScript Programming</h3>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          The game was developed by extending Godot's CharacterBody3D movement system with GDScript scripts for character movement, grappling mechanics, 
+          and physics interactions.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-green-600 mb-3">Physics & Movement Systems</h3>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          The core grappling mechanic utilizes Verlet integration to constrain the player's movement to a rope-like path, allowing for smooth swinging and grappling interactions.
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Line rendering for visual rope representation</li>
+          <li>Raycast-based grapple point detection</li>
+          <li>Verlet integration for easy physics constraints</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-					</div>
-				</div>
+  {/* Development Challenges */}
+  <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Development Challenges</h2>
+    <div class="space-y-6">
+      <div class="border-l-4 border-green-500 pl-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Physics-Based Rope Mechanics</h3>
+        <p class="text-gray-700 mb-3">
+          <strong>Challenge:</strong> Godot's built-in physics Joint system is unintuitive and difficult to work with, especially for rope-like mechanics.
+        </p>
+        <p class="text-gray-700">
+          <strong>Solution:</strong> I used Verlet integration to create a rope-like constraint that allows for smooth swinging mechanics.
+        </p>
+      </div>
+      <div class="border-l-4 border-green-500 pl-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Keeping Code Beginner Friendly</h3>
+        <p class="text-gray-700 mb-3">
+          <strong>Challenge:</strong> Allow others to understand the code and mechanics without being overwhelmed by complexity.
+        </p>
+        <p class="text-gray-700">
+          <strong>Solution:</strong> I wrote the code in a way that is easy to follow, using clear variable names and comments to explain each step of the process.
+        </p>
+      </div>
+    </div>
+  </div>
 
-				<!-- Technical Implementation -->
-				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
-					<h2 class="text-3xl font-bold text-gray-900 mb-6">Technical Implementation</h2>
-					<div class="space-y-6">
-						<div>
-							<h3 class="text-xl font-semibold text-green-600 mb-3">Godot GDScript Programming</h3>
-							<p class="text-gray-700 leading-relaxed mb-4">
-								The game was developed by extending Godot's CharacterBody3D movement system with GDScript scripts for character movement, grappling mechanics, 
-								and physics interactions.
-							</p>
-						</div>
-						<div>
-							<h3 class="text-xl font-semibold text-green-600 mb-3">Physics & Movement Systems</h3>
-							<p class="text-gray-700 leading-relaxed mb-4">
-								The core grappling mechanic utilizes Verlet integration to constrain the player's movement to a rope-like path, allowing for smooth swinging and grappling interactions.
-							</p>
-							<ul class="list-disc list-inside text-gray-700 space-y-1">
-								<li>Line rendering for visual rope representation</li>
-								<li>Raycast-based grapple point detection</li>
-								<li>Verlet integration for easy physics constraints</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<!-- Development Challenges -->
-				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
-					<h2 class="text-3xl font-bold text-gray-900 mb-6">Development Challenges</h2>
-					<div class="space-y-6">
-						<div class="border-l-4 border-green-500 pl-6">
-							<h3 class="text-lg font-semibold text-gray-900 mb-2">Physics-Based Rope Mechanics</h3>
-							<p class="text-gray-700 mb-3">
-								<strong>Challenge:</strong> Godot's built-in physics Joint system is unintuitive and difficult to work with, especially for rope-like mechanics.
-							</p>
-							<p class="text-gray-700">
-								<strong>Solution:</strong> I used Verlet integration to create a rope-like constraint that allows for smooth swinging mechanics.
-							</p>
-						</div>
-						<div class="border-l-4 border-green-500 pl-6">
-							<h3 class="text-lg font-semibold text-gray-900 mb-2">Keeping Code Beginner Friendly</h3>
-							<p class="text-gray-700 mb-3">
-								<strong>Challenge:</strong> Allow others to understand the code and mechanics without being overwhelmed by complexity.
-							</p>
-							<p class="text-gray-700">
-								<strong>Solution:</strong> I wrote the code in a way that is easy to follow, using clear variable names and comments to explain each step of the process.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<!-- Key Learnings & Impact -->
-				<div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
-					<h2 class="text-3xl font-bold text-gray-900 mb-6">Key Learnings & Impact</h2>
-					<div class="grid md:grid-cols-1 gap-6">
-						<div>
-							<h3 class="text-lg font-semibold text-green-600 mb-3">Technical Skills Developed</h3>
-							<ul class="space-y-2 text-gray-700">
-								<li>• Godot 3D development and physics programming</li>
-								<li>• GDScript programming and design patterns</li>
-								<li>• How to implement and use Verlet integration</li>
-							</ul>
-						</div>
-						
-					</div>
-					<div class="mt-8 bg-gradient-to-r from-green-500 to-green-300 p-6 rounded-xl border border-green-100">
-						<h3 class="text-xl font-semibold text-green mb-3">🚀 Project Impact</h3>
-						<p class="text-green leading-relaxed">
-							The project currently has 2 forks and 3 stars on GitHub. While it does not have much reach, it serves as a solid foundation for anyone looking to learn about grappling mechanics in Godot.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</Layout>
+  {/* Key Learnings & Impact */}
+  <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Key Learnings & Impact</h2>
+    <div class="grid md:grid-cols-1 gap-6">
+      <div>
+        <h3 class="text-lg font-semibold text-green-600 mb-3">Technical Skills Developed</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Godot 3D development and physics programming</li>
+          <li>• GDScript programming and design patterns</li>
+          <li>• How to implement and use Verlet integration</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 bg-gradient-to-r from-green-500 to-green-300 p-6 rounded-xl border border-green-100">
+      <h3 class="text-xl font-semibold text-green mb-3">🚀 Project Impact</h3>
+      <p class="text-green leading-relaxed">
+        The project currently has 2 forks and 3 stars on GitHub. While it does not have much reach, it serves as a solid foundation for anyone looking to learn about grappling mechanics in Godot.
+      </p>
+    </div>
+  </div>
+</ProjectLayout>
