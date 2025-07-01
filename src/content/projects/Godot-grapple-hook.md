@@ -8,12 +8,19 @@ secondaryColor: green
 gradientColor: from-teal-500 to-green-500
 accentColor: text-green-600
 accentBg: bg-green-100
+primaryHex: "#14b8a6"
+secondaryHex: "#0d9488"
+accentLightHex: "#ccfbf1"
+---
+
 ---
 
 # Project Overview
 I wanted to create a game that showcased basic grappling hook mechanics using the Godot engine. This project demonstrates the implementation of smooth swinging mechanics similar to those found in my previous project, Grappling Around.
 
 I implemented this project using Godot's GDScript language, focusing on the essential mechanics of a grappling hook system. The project was designed to be easy to follow and well-documented, serving as a potential tutorial resource for other developers interested in learning about physics-based grappling mechanics.
+
+---
 
 # Key Features
 The project focuses on delivering core grappling mechanics with educational value:

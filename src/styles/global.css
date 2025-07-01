@@ -1,3 +1,59 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
-/* Add any custom styles here */
+
+/* Enhanced Markdown Styling for Project Layout */
+.markdown-content {
+  margin: 1rem;
+}
+
+/* Card-based Section Layout using HR separators */
+.markdown-content-cards *{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Images should not have card styling */
+.markdown-content-cards img,
+.markdown-content-cards {
+  margin: 2rem 0 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Create section cards using HR as separators 
+.markdown-content-cards hr{
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  border: 10px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  padding: 0;
+}
+*/
+/* Style H1 headers that start sections */
+.markdown-content-cards h1{
+  background: linear-gradient(135deg, var(--accent-light, #f8fafc) 0%, #f1f5f9 100%);
+  margin: -1rem;
+ 
+  padding: 1rem 1rem;
+  border-left: 4px solid var(--primary-color, #0ea5e9);
+  border-bottom: 1px solid #e5e7eb;
+  border-radius: .1rem 1rem 0 0;
+}
+
+/* Group content after H1 until next HR 
+.markdown-content-cards hr{
+  background: white;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  border: 1px solid #e5e7eb;
+  border-top: none;
+  padding: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}*/
+

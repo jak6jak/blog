@@ -25,6 +25,10 @@ const projects = defineCollection({
     accentColor: z.string().optional(),
     accentBg: z.string().optional(),
     img: z.string().optional(),
+    // New flexible color properties for markdown styling
+    primaryHex: z.string().optional(),
+    secondaryHex: z.string().optional(),
+    accentLightHex: z.string().optional(),
   }),
 });
 

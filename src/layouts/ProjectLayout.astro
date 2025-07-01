@@ -12,13 +12,25 @@ const {
   accentColor = 'text-green-600', 
   accentBg = 'bg-green-100',
   img,
-  children 
+  children,
+  // New flexible hex color properties
+  primaryHex = '#10b981',
+  secondaryHex = '#059669', 
+  accentLightHex = '#d1fae5'
 } = Astro.props;
 import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
 import '../styles/global.css';
+
+// Server-side content processing to create sections
+const processSlotContent = () => {
+  // This will be processed server-side by Astro
+  return null;
+};
 ---
 
 <Layout>
+  <Header currentPage="projects" />
   <div class="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
     <div class="container mx-auto px-6 py-12">
       <div class="max-w-4xl mx-auto">
@@ -28,7 +40,7 @@ import '../styles/global.css';
             <h1 class="text-5xl font-bold mb-6">{title}</h1>
             <p class={`text-2xl text-${primaryColor}-100 mb-8`}>{subtitle}</p>
             <div class="flex flex-wrap gap-3 mb-8">
-              {tags.map(tag => (
+              {tags.map((tag: string) => (
                 <span class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">{tag}</span>
               ))}
             </div>
@@ -42,14 +54,24 @@ import '../styles/global.css';
             )}
           </div>
         </div>
-        <!-- Project Content with Panel Styling -->
-        <div class="prose max-w-4xl mx-auto bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
-          <slot />
+        <!-- Project Content with Individual Section Cards -->
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div class="prose bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8 markdown-content-cards prose-lg max-w-none
+                      prose-headings:text-gray-900 prose-headings:font-bold
+                      prose-h1:text-3xl prose-h1:mb-6 prose-h1:pb-4 prose-h1:border-b prose-h1:border-gray-200
+                      prose-h2:text-2xl prose-h2:mb-4 prose-h2:pb-3 prose-h2:border-b prose-h2:border-gray-100
+                      prose-h3:text-xl prose-h3:mb-3 prose-h3:text-gray-800
+                      prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
+                      prose-ul:space-y-2 prose-li:text-gray-700
+                      prose-strong:text-gray-900 prose-strong:font-semibold
+                      prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
+                      prose-blockquote:border-l-4 prose-blockquote:border-gray-300 prose-blockquote:pl-4 prose-blockquote:italic" >
+            <div class="" style={`--primary-color: ${primaryHex}; --secondary-color: ${secondaryHex}; --accent-light: ${accentLightHex};`}>
+              <slot />
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </Layout>
-
-
-
