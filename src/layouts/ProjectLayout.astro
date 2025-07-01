@@ -1,4 +1,4 @@
----
+--- 
 // Props for customizing colors and content
 const { 
   title, 
@@ -10,7 +10,8 @@ const {
   secondaryColor = 'to-green-500', 
   gradientColor = 'from-teal-500 to-green-500',
   accentColor = 'text-green-600', 
-  accentBg = 'bg-green-100', 
+  accentBg = 'bg-green-100',
+  img,
   children 
 } = Astro.props;
 import Layout from './Layout.astro';
@@ -41,8 +42,14 @@ import '../styles/global.css';
             )}
           </div>
         </div>
-        <slot />
+        <!-- Project Content with Panel Styling -->
+        <div class="prose max-w-4xl mx-auto bg-white rounded-2xl shadow-sm p-8 border border-gray-100 mb-8">
+          <slot />
+        </div>
       </div>
     </div>
   </div>
 </Layout>
+
+
+
